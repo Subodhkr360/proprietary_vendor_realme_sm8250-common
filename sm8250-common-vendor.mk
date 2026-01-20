@@ -1288,6 +1288,9 @@ PRODUCT_PACKAGES += \
     vl53l1_daemon_main
 
 PRODUCT_PACKAGES += \
+    vendor_lib64_camera_components_com_qti_stats_haf_so \
+    vendor_lib64_camera_components_com_qti_stats_pdlib_so \
+    vendor_lib64_libipebpsstriping_so \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
     system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so \

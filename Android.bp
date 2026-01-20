@@ -26811,6 +26811,27 @@ cc_prebuilt_binary {
 }
 
 install_symlink {
+    name: "vendor_lib64_camera_components_com_qti_stats_haf_so",
+    soc_specific: true,
+    installed_location: "lib64/camera/components/com.qti.stats.haf.so",
+    symlink_target: "/odm/lib64/camera/components/com.qti.stats.haf.so",
+}
+
+install_symlink {
+    name: "vendor_lib64_camera_components_com_qti_stats_pdlib_so",
+    soc_specific: true,
+    installed_location: "lib64/camera/components/com.qti.stats.pdlib.so",
+    symlink_target: "/odm/lib64/camera/components/com.qti.stats.pdlib.so",
+}
+
+install_symlink {
+    name: "vendor_lib64_libipebpsstriping_so",
+    soc_specific: true,
+    installed_location: "lib64/libipebpsstriping.so",
+    symlink_target: "/odm/lib64/camera/components/libipebpsstriping.so",
+}
+
+install_symlink {
     name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
     system_ext_specific: true,
     installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",

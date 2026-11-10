@@ -18135,59 +18135,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.biometrics.common-V1-ndk_platform",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/android.hardware.biometrics.common-V1-ndk_platform.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.biometrics.face-V1-ndk_platform",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/android.hardware.biometrics.face-V1-ndk_platform.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.biometrics.common-V1-ndk_platform",
-                "android.hardware.common-V2-ndk_platform",
-                "android.hardware.keymaster-V3-ndk_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.secure_element@1.0-impl",
     owner: "realme",
     strip: {
@@ -24163,15 +24110,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "manifest_oplus_face.xml",
-    owner: "realme",
-    src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_face.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    device_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "manifest_oplus_fingerprint.xml",
     owner: "realme",
     src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml",
@@ -26369,51 +26307,6 @@ cc_prebuilt_binary {
                 "libutils",
                 "libwvhidl",
                 "libbinder",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    device_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.oplus.hardware.biometrics.face@1.0-service",
-    owner: "realme",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service",
-            ],
-            shared_libs: [
-                "libbinder",
-                "liblog",
-                "libhidlbase",
-                "libcutils",
-                "libhardware",
-                "libutils",
-                "libbase",
-                "libcamera2ndk_vendor",
-                "libmediandk",
-                "libnativewindow",
-                "libui",
-                "libbinder_ndk",
-                "android.hardware.biometrics.face-V1-ndk_platform",
-                "android.hardware.biometrics.common-V1-ndk_platform",
-                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
-                "libosenseaidlhalclient",
-                "vendor.oplus.hardware.commondcs-V1-ndk_platform",
-                "libstfaceunlockocl",
-                "libion",
-                "libQSEEComAPI",
                 "libc++",
                 "libc",
                 "libm",
